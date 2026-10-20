@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Books | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo">
+          <img src="images/logo.png" alt="PCC logo">
+        </div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="AddBooks.html" class="nav-link active"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a href="Members.html" class="nav-link"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a href="Returning.html" class="nav-link"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a href="Borrowing.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a href="Settings.html" class="nav-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <div class="heading-addbooks">
+          <h1>Add New Books</h1>
+          <p>Enter book details to add a title to the digital library</p>
+        </div>
+
+        <form class="form-addbooks" novalidate>
+          <div class="cover-section-addbooks">
+            <span class="label-addbooks">Book Cover</span>
+
+            <div class="dropzone-addbooks" tabindex="0" role="button" aria-label="Upload book cover">
+              <img class="preview-addbooks" alt="Book cover preview" hidden>
+              <div class="dropzone-content-addbooks">
+                <i class="fa-solid fa-book dropzone-icon-addbooks"></i>
+                <strong>Upload Book Cover</strong>
+                <span>Drag and drop an image here<br>or click to browse</span>
+                <small>PNG, JPG or JPEG (Max 99MB)</small>
+              </div>
+            </div>
+
+            <input class="file-input-addbooks" type="file" accept="image/png,image/jpeg" hidden>
+            <button class="choose-file-addbooks" type="button"><i class="fa-solid fa-cloud-arrow-up"></i>Choose File</button>
+            <span class="file-name-addbooks"></span>
+          </div>
+
+          <div class="fields-addbooks">
+            <div class="field-addbooks">
+              <label for="title-addbooks">Book Title <em>*</em></label>
+              <input id="title-addbooks" name="title" type="text" placeholder="Clean Code" required>
+            </div>
+            <div class="field-addbooks">
+              <label for="author-addbooks">Author <em>*</em></label>
+              <input id="author-addbooks" name="author" type="text" placeholder="Robert C. Martin" required>
+            </div>
+            <div class="field-addbooks">
+              <label for="isbn-addbooks">ISBN <em>*</em></label>
+              <input id="isbn-addbooks" name="isbn" type="text" placeholder="000-0000000000" required>
+            </div>
+            <div class="field-addbooks">
+              <label for="category-addbooks">Category <em>*</em></label>
+              <select id="category-addbooks" name="category" required>
+                <option value="" disabled selected>Select category</option>
+                <option>Fiction</option>
+                <option>Non-Fiction</option>
+                <option>Multimedia</option>
+                <option>Academic Journals</option>
+              </select>
+            </div>
+            <div class="field-addbooks">
+              <label for="publisher-addbooks">Publisher <em>*</em></label>
+              <input id="publisher-addbooks" name="publisher" type="text" placeholder="Prentice Hall" required>
+            </div>
+            <div class="field-addbooks">
+              <label for="year-addbooks">Publication Year <em>*</em></label>
+              <input id="year-addbooks" name="year" type="number" min="1000" max="2100" placeholder="2006" required>
+            </div>
+            <div class="field-addbooks">
+              <label for="edition-addbooks">Edition</label>
+              <input id="edition-addbooks" name="edition" type="text" placeholder="1st Edition">
+            </div>
+            <div class="field-addbooks"></div>
+            <div class="field-addbooks">
+              <label for="quantity-addbooks">Quantity <em>*</em></label>
+              <input id="quantity-addbooks" name="quantity" type="number" min="1" placeholder="99" required>
+            </div>
+            <div class="field-addbooks">
+              <label for="description-addbooks">Book Description <em>*</em></label>
+              <textarea id="description-addbooks" name="description" rows="4" placeholder="Clean code is a handbook of agile software craftsmanship that helps developers write cleaner, more maintainable code" required></textarea>
+            </div>
+          </div>
+
+          <p class="message-addbooks" role="status"></p>
+
+          <div class="actions-addbooks">
+            <a href="home.html" class="cancel-addbooks">Cancel</a>
+            <button type="submit" class="submit-addbooks"><i class="fa-solid fa-circle-plus"></i>Add Book</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>

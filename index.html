@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body class="page-login">
+  <header class="brand-login">
+    <img src="images/logo.png" alt="PCC logo">
+    <span class="divider-login"></span>
+    <strong>PCC DIGITAL LIBRARY</strong>
+  </header>
+
+  <main class="card-login">
+    <div class="intro-login">
+      <h1>Welcome</h1>
+      <p>Sign in to your library account</p>
+    </div>
+
+    <form class="form-login" novalidate>
+      <h2>Login</h2>
+
+      <div class="field-login">
+        <label for="user-login">Email or username</label>
+        <input id="user-login" type="text" name="username" placeholder="username@gmail.com" autocomplete="username" autofocus>
+      </div>
+
+      <div class="field-login">
+        <label for="password-login">Password</label>
+        <div class="password-wrap-login">
+          <input id="password-login" type="password" name="password" placeholder="Password" autocomplete="current-password">
+          <button type="button" class="toggle-login" aria-label="Show password" aria-pressed="false"><i class="fa-regular fa-eye-slash"></i></button>
+        </div>
+      </div>
+
+      <a href="#" class="forgot-login">Forgot Password?</a>
+
+      <p class="message-login" role="alert"></p>
+
+      <button type="submit" class="submit-login">Sign in</button>
+
+      <p class="register-login">Don't have an account yet? <a href="RegisterMember.html">Register for free</a></p>
+    </form>
+  </main>
+
+  <script src="lms.js"></script>
+</body>
+</html>

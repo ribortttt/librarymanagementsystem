@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register New Member | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo">
+          <img src="images/logo.png" alt="PCC logo">
+        </div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="addbooks.html" class="nav-link"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a href="Members.html" class="nav-link active"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a href="Returning.html" class="nav-link"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a href="Borrowing.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a href="Settings.html" class="nav-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <div class="heading-registermember">
+          <h1>Register New Member</h1>
+          <p>Enter member information to create a library account.</p>
+        </div>
+
+        <form class="form-registermember" novalidate>
+          <div class="photo-section-registermember">
+            <div class="photo-zone-registermember" tabindex="0" role="button" aria-label="Upload member photo">
+              <img class="preview-registermember" alt="Member photo preview" hidden>
+              <div class="photo-content-registermember">
+                <i class="fa-solid fa-user-plus photo-icon-registermember"></i>
+                <strong>Member Photo</strong>
+              </div>
+            </div>
+
+            <div class="upload-info-registermember">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <strong>Upload Photo</strong>
+              <small>PNG, JPG or JPEG (Max 99MB)</small>
+            </div>
+
+            <input class="file-input-registermember" type="file" accept="image/png,image/jpeg" hidden>
+            <button class="choose-file-registermember" type="button"><i class="fa-solid fa-file"></i>Choose File</button>
+            <span class="file-name-registermember"></span>
+          </div>
+
+          <div class="fields-registermember">
+            <div class="field-registermember">
+              <label for="fullname-registermember">Full Name <em>*</em></label>
+              <div class="input-wrap-registermember">
+                <i class="fa-solid fa-user"></i>
+                <input id="fullname-registermember" name="fullname" type="text" placeholder="Ako Dela Cruz" required>
+              </div>
+            </div>
+
+            <div class="field-registermember">
+              <label for="idnumber-registermember">Student/Employee ID <em>*</em></label>
+              <div class="input-wrap-registermember">
+                <i class="fa-solid fa-id-badge"></i>
+                <input id="idnumber-registermember" name="idnumber" type="text" placeholder="PCC-2026-001" required>
+              </div>
+            </div>
+
+            <div class="field-registermember">
+              <label for="email-registermember">Email Address <em>*</em></label>
+              <div class="input-wrap-registermember">
+                <i class="fa-regular fa-envelope"></i>
+                <input id="email-registermember" name="email" type="email" placeholder="Admin@pccnet.edu.ph" required>
+              </div>
+            </div>
+
+            <div class="field-registermember">
+              <label for="contact-registermember">Contact Number</label>
+              <div class="input-wrap-registermember">
+                <i class="fa-solid fa-phone"></i>
+                <input id="contact-registermember" name="contact" type="tel" placeholder="+63 999 999 9999">
+              </div>
+            </div>
+
+            <div class="field-registermember">
+              <label for="type-registermember">Member Type <em>*</em></label>
+              <div class="input-wrap-registermember">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <select id="type-registermember" name="type" required>
+                  <option value="" disabled selected>Select member type</option>
+                  <option>Student</option>
+                  <option>Faculty</option>
+                  <option>Staff</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-registermember">
+              <label for="department-registermember">Department/Program</label>
+              <div class="input-wrap-registermember">
+                <i class="fa-regular fa-building"></i>
+                <input id="department-registermember" name="department" type="text" placeholder="Information in Technology">
+              </div>
+            </div>
+
+            <div class="field-registermember">
+              <label for="year-registermember">Year Level</label>
+              <div class="input-wrap-registermember">
+                <i class="fa-solid fa-users"></i>
+                <select id="year-registermember" name="year">
+                  <option value="" disabled selected>Select year level</option>
+                  <option>1st Year</option>
+                  <option>2nd Year</option>
+                  <option>3rd Year</option>
+                  <option>4th Year</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-registermember"></div>
+
+            <div class="field-registermember">
+              <label for="date-registermember">Date Registered</label>
+              <div class="input-wrap-registermember">
+                <i class="fa-regular fa-calendar-days"></i>
+                <input id="date-registermember" name="date" type="text" readonly>
+              </div>
+            </div>
+
+            <div class="field-registermember">
+              <label for="status-registermember">Account Status <em>*</em></label>
+              <div class="input-wrap-registermember">
+                <i class="fa-solid fa-user-check"></i>
+                <select id="status-registermember" name="status" required>
+                  <option>Active</option>
+                  <option>Inactive</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <p class="message-registermember" role="status"></p>
+
+          <div class="actions-registermember">
+            <a href="home.html" class="cancel-registermember">Cancel</a>
+            <button type="submit" class="submit-registermember"><i class="fa-solid fa-circle-plus"></i>Register Member</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>

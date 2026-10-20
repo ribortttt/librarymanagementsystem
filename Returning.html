@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Returning Books | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo"><img src="images/logo.png" alt="PCC logo"></div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a class="nav-link" href="home.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a class="nav-link" href="AddBooks.html"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a class="nav-link" href="Members.html"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a class="nav-link active" href="Returning.html"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a class="nav-link" href="Borrowing.html"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a class="nav-link" href="Settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <section class="header-returning">
+          <div class="heading-returning">
+            <h1>Returning Books</h1>
+            <p>View and manage books that have been returned !</p>
+
+            <div class="banner-returning" role="status">
+              <i class="fa-solid fa-circle-check"></i>
+              <div>
+                <strong>Book Returned Successfully!</strong>
+                <span>The book has been returned and the member's record has been updated.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="side-returning">
+            <div class="art-returning"><i class="fa-solid fa-book"></i></div>
+            <button class="refresh-returning" type="button">
+              <i class="fa-solid fa-rotate"></i>
+              <span>Refresh</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="filters-returning">
+          <label class="date-returning">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="date" id="dateFrom-returning" value="2026-09-01" aria-label="From date">
+          </label>
+          <span class="dash-returning">-</span>
+          <label class="date-returning">
+            <input type="date" id="dateTo-returning" value="2026-09-30" aria-label="To date">
+            <i class="fa-solid fa-calendar-days"></i>
+          </label>
+
+          <div class="select-returning">
+            <i class="fa-solid fa-user"></i>
+            <select id="memberFilter-returning" aria-label="Filter by member">
+              <option value="">All Members</option>
+              <option>Madird</option>
+              <option>Palomar</option>
+              <option>Malupiton</option>
+              <option>antetokounmpo</option>
+              <option>Uncle Dags</option>
+              <option>Lebron</option>
+            </select>
+          </div>
+
+          <div class="select-returning">
+            <i class="fa-solid fa-book"></i>
+            <select id="bookFilter-returning" aria-label="Filter by book">
+              <option value="">All Books</option>
+              <option>Whidbey</option>
+              <option>Illuminae</option>
+              <option>The Great Gatsby</option>
+              <option>Becoming</option>
+              <option>A Far-Flung Life</option>
+              <option>The lightning thief</option>
+            </select>
+          </div>
+        </section>
+
+        <section class="directory-returning">
+          <table class="table-returning">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Book Cover</th>
+                <th>Title</th>
+                <th>Member</th>
+                <th>Returned Date</th>
+                <th>Due Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-date="2026-09-06">
+                <td><strong class="id-returning">RT-001</strong></td>
+                <td><div class="cover cover-one"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-returning">Whidbey</strong></td>
+                <td>Madird</td>
+                <td>September 6, 2026</td>
+                <td>September 6, 2026</td>
+                <td><span class="status-returning">Returned</span></td>
+                <td><button class="view-returning" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr data-date="2026-09-06">
+                <td><strong class="id-returning">RT-002</strong></td>
+                <td><div class="cover cover-two"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-returning">Illuminae</strong></td>
+                <td>Palomar</td>
+                <td>September 6, 2026</td>
+                <td>September 6, 2026</td>
+                <td><span class="status-returning">Returned</span></td>
+                <td><button class="view-returning" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr data-date="2026-09-06">
+                <td><strong class="id-returning">RT-003</strong></td>
+                <td><div class="cover cover-three"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-returning">The Great Gatsby</strong></td>
+                <td>Malupiton</td>
+                <td>September 6, 2026</td>
+                <td>September 6, 2026</td>
+                <td><span class="status-returning">Returned</span></td>
+                <td><button class="view-returning" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr data-date="2026-09-06">
+                <td><strong class="id-returning">RT-004</strong></td>
+                <td><div class="cover cover-four"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-returning">Becoming</strong></td>
+                <td>antetokounmpo</td>
+                <td>September 6, 2026</td>
+                <td>September 6, 2026</td>
+                <td><span class="status-returning">Returned</span></td>
+                <td><button class="view-returning" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr data-date="2026-09-06">
+                <td><strong class="id-returning">RT-005</strong></td>
+                <td><div class="cover cover-five"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-returning">A Far-Flung Life</strong></td>
+                <td>Uncle Dags</td>
+                <td>September 6, 2026</td>
+                <td>September 6, 2026</td>
+                <td><span class="status-returning">Returned</span></td>
+                <td><button class="view-returning" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr data-date="2026-09-06">
+                <td><strong class="id-returning">RT-006</strong></td>
+                <td><div class="cover cover-five"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-returning">The lightning thief</strong></td>
+                <td>Lebron</td>
+                <td>September 6, 2026</td>
+                <td>September 6, 2026</td>
+                <td><span class="status-returning">Returned</span></td>
+                <td><button class="view-returning" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty-returning" hidden>No returned books match your filters.</p>
+        </section>
+
+        <footer class="footer-returning">
+          <span class="count-returning">Showing 1 - 6 of 44 books</span>
+          <div class="pagination-returning">
+            <button class="page-returning prev-returning" type="button" aria-label="Previous page">&lt;</button>
+            <button class="page-returning current-returning" type="button">1</button>
+            <button class="page-returning" type="button">2</button>
+            <button class="page-returning" type="button">3</button>
+            <button class="page-returning" type="button">4</button>
+            <button class="page-returning" type="button">5</button>
+            <button class="page-returning next-returning" type="button" aria-label="Next page">&gt;</button>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>

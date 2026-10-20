@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo">
+          <img src="images/logo.png" alt="PCC logo">
+        </div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="addbooks.html" class="nav-link"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a href="Members.html" class="nav-link"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a href="Returning.html" class="nav-link"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a href="Borrowing.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a href="Settings.html" class="nav-link active"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <div class="heading-settings">
+          <h1>Settings</h1>
+          <p>Manage your system preferences and account settings.</p>
+        </div>
+
+        <div class="layout-settings">
+          <nav class="tabs-settings" aria-label="Settings sections">
+            <button type="button" class="tab-settings current-settings" data-title="General Settings"><i class="fa-solid fa-gear"></i><span>General</span></button>
+            <button type="button" class="tab-settings" data-title="Library Information"><i class="fa-solid fa-book"></i><span>Library Information</span></button>
+            <button type="button" class="tab-settings" data-title="User Management"><i class="fa-solid fa-user-group"></i><span>User Management</span></button>
+            <button type="button" class="tab-settings" data-title="Notification Settings"><i class="fa-solid fa-bell"></i><span>Notification Settings</span></button>
+            <button type="button" class="tab-settings" data-title="Appearance"><i class="fa-solid fa-palette"></i><span>Appearance</span></button>
+            <button type="button" class="tab-settings" data-title="Security"><i class="fa-solid fa-shield-halved"></i><span>Security</span></button>
+          </nav>
+
+          <section class="panel-settings">
+            <h2 class="title-settings">General Settings</h2>
+
+            <form class="form-settings" novalidate>
+              <div class="field-settings">
+                <label for="systemName-settings">System Name</label>
+                <input id="systemName-settings" type="text" value="PCC Digital Library" required>
+              </div>
+              <div class="field-settings">
+                <label for="language-settings">Language</label>
+                <select id="language-settings">
+                  <option>English</option>
+                  <option>Filipino</option>
+                </select>
+              </div>
+              <div class="field-settings">
+                <label for="timeZone-settings">Time Zone</label>
+                <select id="timeZone-settings">
+                  <option>(GMT + 12:00) Philippines Standard Time</option>
+                  <option>(GMT + 09:00) Japan Standard Time</option>
+                  <option>(GMT + 00:00) Coordinated Universal Time</option>
+                </select>
+              </div>
+              <div class="field-settings">
+                <label for="dateFormat-settings">Date Format</label>
+                <select id="dateFormat-settings">
+                  <option>MM/DD/YY</option>
+                  <option>DD/MM/YY</option>
+                  <option>YY/MM/DD</option>
+                </select>
+              </div>
+              <div class="field-settings">
+                <label for="logout-settings">Auto Log Out (Minutes)</label>
+                <input id="logout-settings" type="number" min="5" max="120" value="30" required>
+              </div>
+
+              <p class="message-settings" role="status"></p>
+
+              <div class="actions-settings">
+                <button type="submit" class="save-settings"><i class="fa-solid fa-floppy-disk"></i>Save Changes</button>
+              </div>
+            </form>
+
+            <div class="empty-settings" hidden>
+              <p>These settings are not available yet.</p>
+            </div>
+          </section>
+        </div>
+
+        <div class="lower-settings">
+          <section class="info-settings">
+            <h2><i class="fa-solid fa-circle-exclamation"></i>System Information</h2>
+            <dl>
+              <dt>Version</dt>
+              <dd>v1.0.0</dd>
+              <dt>Last Updated</dt>
+              <dd>September 6, 2026</dd>
+              <dt>Developer</dt>
+              <dd>Jasmine, and Chris</dd>
+            </dl>
+          </section>
+
+          <div class="art-settings"><i class="fa-solid fa-book"></i></div>
+
+          <section class="quick-settings">
+            <h2><i class="fa-solid fa-bolt"></i>Quick Actions</h2>
+            <div class="grid-settings">
+              <button type="button" class="action-settings" data-message="Backup started. Your data is being saved."><i class="fa-solid fa-server"></i><span><strong>Backup Now</strong><small>Save your data</small></span></button>
+              <button type="button" class="action-settings" data-message="Restore ready. Choose a backup to recover your data."><i class="fa-solid fa-file-import"></i><span><strong>Restore data</strong><small>Recover from backup</small></span></button>
+              <button type="button" class="action-settings" data-message="Cache cleared."><i class="fa-solid fa-trash"></i><span><strong>Clear Cache</strong><small>Free up space</small></span></button>
+              <button type="button" class="action-settings" data-message="You are using the latest version (v1.0.0)."><i class="fa-solid fa-rotate"></i><span><strong>Check updates</strong><small>Get the latest version</small></span></button>
+            </div>
+            <p class="notice-settings" role="status"></p>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>

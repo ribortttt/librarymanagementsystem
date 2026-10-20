@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Borrowing Books | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo"><img src="images/logo.png" alt="PCC logo"></div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a class="nav-link" href="home.html"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a class="nav-link" href="AddBooks.html"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a class="nav-link" href="Members.html"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a class="nav-link" href="Returning.html"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a class="nav-link active" href="Borrowing.html"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a class="nav-link" href="Settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <section class="header-borrowing">
+          <div class="heading-borrowing">
+            <h1>Borrowing Books</h1>
+            <p>View and manage all book borrowing records</p>
+          </div>
+          <div class="art-borrowing"><i class="fa-solid fa-book"></i></div>
+        </section>
+
+        <section class="stats-borrowing">
+          <div class="stat-borrowing">
+            <div class="stat-icon-borrowing maroon-borrowing"><i class="fa-solid fa-book"></i></div>
+            <div>
+              <span>Total Borrowings</span>
+              <strong>91</strong>
+              <small>This month</small>
+            </div>
+          </div>
+          <div class="stat-borrowing">
+            <div class="stat-icon-borrowing green-borrowing"><i class="fa-solid fa-users"></i></div>
+            <div>
+              <span>Active Members</span>
+              <strong>320</strong>
+              <small>Registered Users</small>
+            </div>
+          </div>
+          <div class="stat-borrowing">
+            <div class="stat-icon-borrowing yellow-borrowing"><i class="fa-solid fa-clock-rotate-left"></i></div>
+            <div>
+              <span>Overdue Books</span>
+              <strong>12</strong>
+              <small>Need Attention</small>
+            </div>
+          </div>
+          <div class="stat-borrowing">
+            <div class="stat-icon-borrowing purple-borrowing"><i class="fa-solid fa-calendar-days"></i></div>
+            <div>
+              <span>Returned Books</span>
+              <strong>44</strong>
+              <small>This Month</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="directory-borrowing">
+          <h2>Borrowing Records</h2>
+
+          <div class="toolbar-borrowing">
+            <div class="search-borrowing">
+              <i class="fa-solid fa-bars"></i>
+              <input id="recordSearch-borrowing" type="text" placeholder="Search records">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+
+            <div class="filters-borrowing">
+              <select class="filter-borrowing" id="memberFilter-borrowing" aria-label="Filter by member">
+                <option value="">All Members</option>
+                <option>Del</option>
+                <option>Joy</option>
+                <option>Liles</option>
+                <option>Bim</option>
+                <option>Hev Abi</option>
+                <option>Nye nye</option>
+              </select>
+              <select class="filter-borrowing" id="bookFilter-borrowing" aria-label="Filter by book">
+                <option value="">All Books</option>
+                <option>Whidbey</option>
+                <option>Illuminae</option>
+                <option>The Great Gatsby</option>
+                <option>Becoming</option>
+                <option>A Far-Flung Life</option>
+                <option>The lightning thief</option>
+              </select>
+            </div>
+          </div>
+
+          <table class="table-borrowing">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Book Cover</th>
+                <th>Title</th>
+                <th>Member</th>
+                <th>Borrowed Date</th>
+                <th>Due Date</th>
+                <th>Return Date</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong class="id-borrowing">BR-001</strong></td>
+                <td><div class="cover cover-one"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-borrowing">Whidbey</strong></td>
+                <td>Del</td>
+                <td>September 6, 2026</td>
+                <td>-</td>
+                <td>September 16, 2026</td>
+                <td><span class="status-borrowing borrowed-borrowing">Borrowed</span></td>
+                <td><button class="view-borrowing" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr>
+                <td><strong class="id-borrowing">BR-002</strong></td>
+                <td><div class="cover cover-two"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-borrowing">Illuminae</strong></td>
+                <td>Joy</td>
+                <td>September 6, 2026</td>
+                <td>-</td>
+                <td>September 7, 2026</td>
+                <td><span class="status-borrowing borrowed-borrowing">Borrowed</span></td>
+                <td><button class="view-borrowing" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr>
+                <td><strong class="id-borrowing">BR-003</strong></td>
+                <td><div class="cover cover-three"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-borrowing">The Great Gatsby</strong></td>
+                <td>Liles</td>
+                <td>September 6, 2026</td>
+                <td>September 26, 2026</td>
+                <td>September 18, 2026</td>
+                <td><span class="status-borrowing returned-borrowing">Returned</span></td>
+                <td><button class="view-borrowing" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr>
+                <td><strong class="id-borrowing">BR-004</strong></td>
+                <td><div class="cover cover-four"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-borrowing">Becoming</strong></td>
+                <td>Bim</td>
+                <td>September 6, 2026</td>
+                <td>-</td>
+                <td>September 13, 2026</td>
+                <td><span class="status-borrowing borrowed-borrowing">Borrowed</span></td>
+                <td><button class="view-borrowing" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr>
+                <td><strong class="id-borrowing">BR-005</strong></td>
+                <td><div class="cover cover-five"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-borrowing">A Far-Flung Life</strong></td>
+                <td>Hev Abi</td>
+                <td>September 6, 2026</td>
+                <td>September 26, 2026</td>
+                <td>September 9, 2026</td>
+                <td><span class="status-borrowing returned-borrowing">Returned</span></td>
+                <td><button class="view-borrowing" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+              <tr>
+                <td><strong class="id-borrowing">BR-006</strong></td>
+                <td><div class="cover cover-five"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-borrowing">The lightning thief</strong></td>
+                <td>Nye nye</td>
+                <td>September 6, 2026</td>
+                <td>September 26, 2026</td>
+                <td>September 9, 2026</td>
+                <td><span class="status-borrowing returned-borrowing">Returned</span></td>
+                <td><button class="view-borrowing" type="button"><i class="fa-solid fa-eye"></i> View</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty-borrowing" hidden>No borrowing records match your filters.</p>
+        </section>
+
+        <footer class="footer-borrowing">
+          <span class="count-borrowing">Showing 1 - 6 of 15 books</span>
+          <div class="pagination-borrowing">
+            <button class="page-borrowing prev-borrowing" type="button" aria-label="Previous page">&lt;</button>
+            <button class="page-borrowing current-borrowing" type="button">1</button>
+            <button class="page-borrowing" type="button">2</button>
+            <button class="page-borrowing" type="button">3</button>
+            <button class="page-borrowing next-borrowing" type="button" aria-label="Next page">&gt;</button>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>

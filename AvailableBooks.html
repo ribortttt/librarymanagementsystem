@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Books | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo">
+          <img src="images/logo.png" alt="PCC logo">
+        </div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a href="home.html" class="nav-link active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="AddBooks.html" class="nav-link"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a href="Members.html" class="nav-link"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a href="Returning.html" class="nav-link"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a href="Borrowing.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a href="Settings.html" class="nav-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <div class="header-availability">
+          <div class="heading-availability">
+            <h1>All books</h1>
+            <p>Browse and manage your library collection.</p>
+          </div>
+          <a href="addbooks.html" class="add-availability"><i class="fa-solid fa-circle-plus"></i>Add Book</a>
+        </div>
+
+        <section class="stats-availability">
+          <div class="stat-availability">
+            <div class="stat-icon-availability maroon-availability"><i class="fa-solid fa-book"></i></div>
+            <div><span>Total Books</span><strong>1,221</strong></div>
+          </div>
+          <div class="stat-availability">
+            <div class="stat-icon-availability green-availability"><i class="fa-solid fa-user-group"></i></div>
+            <div><span>Total Members</span><strong>456</strong></div>
+          </div>
+          <div class="stat-availability">
+            <div class="stat-icon-availability yellow-availability"><i class="fa-solid fa-rotate"></i></div>
+            <div><span>Books Borrowed</span><strong>67</strong></div>
+          </div>
+          <div class="stat-availability">
+            <div class="stat-icon-availability purple-availability"><i class="fa-solid fa-calendar-xmark"></i></div>
+            <div><span>Overdue Books</span><strong>13</strong></div>
+          </div>
+        </section>
+
+        <section class="directory-availability">
+          <h2>Book Collection</h2>
+
+          <div class="toolbar-availability">
+            <label class="search-availability" for="bookSearch-availability">
+              <i class="fa-solid fa-bars"></i>
+              <input id="bookSearch-availability" type="search" placeholder="Search title, author or category">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+
+            <div class="filters-availability">
+              <select class="filter-availability" id="categoryFilter-availability" aria-label="Filter by category">
+                <option value="">All Categories</option>
+                <option>Fiction</option>
+                <option>Motivation</option>
+                <option>Romance</option>
+                <option>Non-Fiction</option>
+                <option>Digital Fiction</option>
+              </select>
+              <select class="filter-availability" id="statusFilter-availability" aria-label="Filter by status">
+                <option value="">All Statuses</option>
+                <option>Available</option>
+                <option>Checked Out</option>
+              </select>
+            </div>
+          </div>
+
+          <table class="table-availability">
+            <thead>
+              <tr><th>Cover</th><th>Title</th><th>Author</th><th>Category</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><div class="cover cover-one"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-availability">Wallflower</strong></td>
+                <td>Tara Hudson</td>
+                <td>Fiction</td>
+                <td><span class="status-availability available-availability">Available</span></td>
+                <td>
+                  <div class="actions-cell-availability">
+                    <button class="menu-button-availability" type="button" aria-label="Book actions"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="menu-availability" hidden>
+                      <button type="button" data-action="view">View Details</button>
+                      <button type="button" data-action="toggle">Mark as Checked Out</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="cover cover-two"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-availability">Sunrise</strong></td>
+                <td>Jay Koushi</td>
+                <td>Motivation</td>
+                <td><span class="status-availability available-availability">Available</span></td>
+                <td>
+                  <div class="actions-cell-availability">
+                    <button class="menu-button-availability" type="button" aria-label="Book actions"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="menu-availability" hidden>
+                      <button type="button" data-action="view">View Details</button>
+                      <button type="button" data-action="toggle">Mark as Checked Out</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="cover cover-three"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-availability">The Great Gatsby</strong></td>
+                <td>Jasper Hill</td>
+                <td>Romance</td>
+                <td><span class="status-availability available-availability">Available</span></td>
+                <td>
+                  <div class="actions-cell-availability">
+                    <button class="menu-button-availability" type="button" aria-label="Book actions"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="menu-availability" hidden>
+                      <button type="button" data-action="view">View Details</button>
+                      <button type="button" data-action="toggle">Mark as Checked Out</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="cover cover-four"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-availability">Becoming</strong></td>
+                <td>Michelle Obama</td>
+                <td>Non-Fiction</td>
+                <td><span class="status-availability checkedout-availability">Checked Out</span></td>
+                <td>
+                  <div class="actions-cell-availability">
+                    <button class="menu-button-availability" type="button" aria-label="Book actions"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="menu-availability" hidden>
+                      <button type="button" data-action="view">View Details</button>
+                      <button type="button" data-action="toggle">Mark as Available</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="cover cover-five"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-availability">A Far-Seeing Life</strong></td>
+                <td>M.J. Scher</td>
+                <td>Fiction</td>
+                <td><span class="status-availability available-availability">Available</span></td>
+                <td>
+                  <div class="actions-cell-availability">
+                    <button class="menu-button-availability" type="button" aria-label="Book actions"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="menu-availability" hidden>
+                      <button type="button" data-action="view">View Details</button>
+                      <button type="button" data-action="toggle">Mark as Checked Out</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="cover cover-six"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-availability">The Enlightening Truth</strong></td>
+                <td>R. Nivian</td>
+                <td>Digital Fiction</td>
+                <td><span class="status-availability available-availability">Available</span></td>
+                <td>
+                  <div class="actions-cell-availability">
+                    <button class="menu-button-availability" type="button" aria-label="Book actions"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="menu-availability" hidden>
+                      <button type="button" data-action="view">View Details</button>
+                      <button type="button" data-action="toggle">Mark as Checked Out</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><div class="cover cover-seven"><i class="fa-solid fa-book"></i></div></td>
+                <td><strong class="title-availability">Game On</strong></td>
+                <td>Vanessa Allen</td>
+                <td>Fiction</td>
+                <td><span class="status-availability checkedout-availability">Checked Out</span></td>
+                <td>
+                  <div class="actions-cell-availability">
+                    <button class="menu-button-availability" type="button" aria-label="Book actions"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                    <div class="menu-availability" hidden>
+                      <button type="button" data-action="view">View Details</button>
+                      <button type="button" data-action="toggle">Mark as Available</button>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="empty-availability" hidden>No books match your search or filters.</p>
+        </section>
+
+        <footer class="footer-availability">
+          <span class="count-availability">Showing 1–7 of 1,221 books</span>
+          <div class="pagination-availability">
+            <button type="button" class="page-availability prev-availability" aria-label="Previous page"><i class="fa-solid fa-angle-left"></i></button>
+            <button type="button" class="page-availability current-availability">1</button>
+            <button type="button" class="page-availability">2</button>
+            <button type="button" class="page-availability">3</button>
+            <button type="button" class="page-availability">4</button>
+            <button type="button" class="page-availability next-availability" aria-label="Next page"><i class="fa-solid fa-angle-right"></i></button>
+          </div>
+        </footer>
+
+        <p class="notice-availability" role="status"></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>

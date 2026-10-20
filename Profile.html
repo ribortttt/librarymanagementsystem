@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo">
+          <img src="images/logo.png" alt="PCC logo">
+        </div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="addbooks.html" class="nav-link"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a href="Members.html" class="nav-link"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a href="Returning.html" class="nav-link"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a href="Borrowing.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a href="Settings.html" class="nav-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <div class="heading-profile">
+          <h1>My Profile</h1>
+          <p>View and manage your account information and preferences</p>
+        </div>
+
+        <section class="layout-profile">
+          <div class="summary-profile">
+            <div class="avatar-profile"><i class="fa-solid fa-user"></i></div>
+            <h2 class="name-profile" data-bind="name">Library Admin</h2>
+            <span class="role-profile">Administrator</span>
+            <span class="status-profile"><i class="fa-solid fa-circle"></i>Active</span>
+
+            <ul class="contact-profile">
+              <li><i class="fa-regular fa-envelope"></i><span data-bind="email">Admin@pccnet.edu.ph</span></li>
+              <li><i class="fa-solid fa-phone"></i><span data-bind="phone">+63 999 999 9999</span></li>
+              <li><i class="fa-solid fa-id-card"></i><span>LIB-001</span></li>
+            </ul>
+          </div>
+
+          <section class="personal-profile">
+            <h2>Personal Information</h2>
+
+            <div class="field-profile" data-field="name">
+              <span class="label-profile">Full name</span>
+              <div class="row-profile">
+                <i class="fa-solid fa-user"></i>
+                <span class="value-profile" data-bind="name">Library Admin</span>
+                <button type="button" class="edit-profile" aria-label="Edit full name"><i class="fa-solid fa-pencil"></i></button>
+              </div>
+            </div>
+
+            <div class="field-profile" data-field="email">
+              <span class="label-profile">Email Address</span>
+              <div class="row-profile">
+                <i class="fa-regular fa-envelope"></i>
+                <span class="value-profile" data-bind="email">Admin@pccnet.edu.ph</span>
+                <button type="button" class="edit-profile" aria-label="Edit email address"><i class="fa-solid fa-pencil"></i></button>
+              </div>
+            </div>
+
+            <div class="field-profile" data-field="phone">
+              <span class="label-profile">Phone Number</span>
+              <div class="row-profile">
+                <i class="fa-solid fa-phone"></i>
+                <span class="value-profile" data-bind="phone">+63 999 999 9999</span>
+                <button type="button" class="edit-profile" aria-label="Edit phone number"><i class="fa-solid fa-pencil"></i></button>
+              </div>
+            </div>
+
+            <div class="field-profile" data-field="username">
+              <span class="label-profile">Username</span>
+              <div class="row-profile">
+                <i class="fa-solid fa-user"></i>
+                <span class="value-profile" data-bind="username">Libraryadmin</span>
+                <button type="button" class="edit-profile" aria-label="Edit username"><i class="fa-solid fa-pencil"></i></button>
+              </div>
+            </div>
+
+            <p class="message-profile" role="status"></p>
+          </section>
+        </section>
+
+        <section class="account-profile">
+          <h2>Account Information</h2>
+          <div class="grid-profile">
+            <div class="item-profile">
+              <i class="fa-solid fa-user"></i>
+              <div><span>Account Type</span><strong>Administrator</strong></div>
+            </div>
+            <div class="item-profile">
+              <i class="fa-solid fa-calendar-days"></i>
+              <div><span>Member Since</span><strong>September 1, 2026</strong></div>
+            </div>
+            <div class="item-profile">
+              <i class="fa-solid fa-stopwatch"></i>
+              <div><span>Last login</span><strong>September 1, 2026<br>11:59 PM</strong></div>
+            </div>
+            <div class="item-profile">
+              <i class="fa-solid fa-shield"></i>
+              <div><span>Account Status</span><strong class="pill-profile">Active</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="actions-profile">
+          <button type="button" class="edit-all-profile"><i class="fa-solid fa-pencil"></i><span>Edit Profile</span></button>
+          <button type="button" class="password-profile"><i class="fa-solid fa-lock"></i>Change Password</button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>

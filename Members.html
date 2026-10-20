@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Members | PCC Digital Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="lms.css">
+</head>
+<body>
+  <div id="app">
+
+    <aside id="sidebar">
+      <div id="brand">
+        <div id="brandLogo">
+          <img src="images/logo.png" alt="PCC logo">
+        </div>
+        <div class="brand-text">
+          <strong>PCC</strong>
+          <small>DIGITAL LIBRARY</small>
+        </div>
+      </div>
+
+      <nav id="navigation">
+        <a href="home.html" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="AddBooks.html" class="nav-link"><i class="fa-solid fa-book-open"></i><span>Books</span></a>
+        <a href="Members.html" class="nav-link active"><i class="fa-solid fa-user-group"></i><span>Members</span></a>
+        <a href="Returning.html" class="nav-link"><i class="fa-solid fa-arrow-right-to-bracket fa-flip-horizontal"></i><span>Returning</span></a>
+        <a href="Borrowing.html" class="nav-link"><i class="fa-solid fa-book-bookmark"></i><span>Borrowing</span></a>
+        <a href="Settings.html" class="nav-link"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+      </nav>
+
+      <div id="sidebarFooter">
+        <i class="fa-solid fa-book-open"></i>
+        <p>Better Readers,<br>Build a Brighter<br>Future™</p>
+      </div>
+    </aside>
+
+    <main id="main">
+      <header id="topbar">
+        <label id="searchBox" for="searchInput">
+          <i class="fa-solid fa-bars"></i>
+          <input id="searchInput" type="search" placeholder="Hinted search text">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+
+        <div id="topActions">
+          <button id="notification" type="button" aria-label="Notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span class="notif-dot"></span>
+          </button>
+          <button id="profileBtn" type="button">
+            <span id="adminAvatar"><i class="fa-solid fa-user"></i></span>
+            <span class="profile-label">Profile</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </header>
+
+      <div id="content">
+        <div class="header-members">
+          <div class="heading-members">
+            <h1>Members</h1>
+            <p>Manage library members and accounts.</p>
+          </div>
+
+          <div class="toolbar-members">
+            <select class="filter-members" id="roleFilter-members" aria-label="Filter by role">
+              <option value="">All Members</option>
+              <option>Student</option>
+              <option>Faculty</option>
+              <option>Staff</option>
+            </select>
+            <select class="filter-members" id="statusFilter-members" aria-label="Filter by status">
+              <option value="">All Status</option>
+              <option>Active</option>
+              <option>Pending</option>
+              <option>Suspended</option>
+            </select>
+            <a href="RegisterMember.html" class="add-members"><i class="fa-solid fa-circle-plus"></i>Add Member</a>
+          </div>
+        </div>
+
+        <section class="stats-members">
+          <div class="stat-members">
+            <div class="stat-icon-members maroon-members"><i class="fa-solid fa-user"></i></div>
+            <div><span>Total Members</span><strong>456</strong></div>
+          </div>
+          <div class="stat-members">
+            <div class="stat-icon-members green-members"><i class="fa-solid fa-users"></i></div>
+            <div><span>Active Members</span><strong>320</strong></div>
+          </div>
+          <div class="stat-members">
+            <div class="stat-icon-members yellow-members"><i class="fa-solid fa-users"></i></div>
+            <div><span>Pending Approval</span><strong>18</strong></div>
+          </div>
+          <div class="stat-members">
+            <div class="stat-icon-members dark-members"><i class="fa-solid fa-users"></i></div>
+            <div><span>Suspended</span><strong>17</strong></div>
+          </div>
+        </section>
+
+        <section class="directory-members">
+          <h2>Member Directory</h2>
+          <table class="table-members">
+            <thead>
+              <tr><th>Member</th><th>Member ID</th><th>Email</th><th>Role</th><th>Date Joined</th><th>Status</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td><div class="person-members"><span class="avatar-members"><i class="fa-solid fa-user"></i></span><strong>Maria Santos</strong></div></td>
+                  <td>PCC-3028-001</td>
+                  <td>Mariasantos@pcc.edu.ph</td>
+                  <td>Student</td>
+                  <td>September 6, 2026</td>
+                  <td><span class="status-members active-members">Active</span></td>
+                  <td>
+                    <div class="actions-cell-members">
+                      <button class="menu-button-members" type="button" aria-label="Member actions"><i class="fa-solid fa-ellipsis"></i></button>
+                      <div class="menu-members" hidden>
+                        <button type="button" data-action="view">View Profile</button>
+                        <button type="button" data-action="edit">Edit Member</button>
+                        <button type="button" data-action="toggle">Suspend</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="person-members"><span class="avatar-members"><i class="fa-solid fa-user"></i></span><strong>John Reyes</strong></div></td>
+                  <td>PCC-3028-002</td>
+                  <td>Johnreyes@pcc.edu.ph</td>
+                  <td>Faculty</td>
+                  <td>September 14, 2026</td>
+                  <td><span class="status-members active-members">Active</span></td>
+                  <td>
+                    <div class="actions-cell-members">
+                      <button class="menu-button-members" type="button" aria-label="Member actions"><i class="fa-solid fa-ellipsis"></i></button>
+                      <div class="menu-members" hidden>
+                        <button type="button" data-action="view">View Profile</button>
+                        <button type="button" data-action="edit">Edit Member</button>
+                        <button type="button" data-action="toggle">Suspend</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="person-members"><span class="avatar-members"><i class="fa-solid fa-user"></i></span><strong>Angela Cruz</strong></div></td>
+                  <td>PCC-3028-003</td>
+                  <td>Angelacruz@pcc.edu.ph</td>
+                  <td>Student</td>
+                  <td>September 24, 2026</td>
+                  <td><span class="status-members pending-members">Pending</span></td>
+                  <td>
+                    <div class="actions-cell-members">
+                      <button class="menu-button-members" type="button" aria-label="Member actions"><i class="fa-solid fa-ellipsis"></i></button>
+                      <div class="menu-members" hidden>
+                        <button type="button" data-action="view">View Profile</button>
+                        <button type="button" data-action="edit">Edit Member</button>
+                        <button type="button" data-action="toggle">Suspend</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="person-members"><span class="avatar-members"><i class="fa-solid fa-user"></i></span><strong>Mark Dela Rosa</strong></div></td>
+                  <td>PCC-3028-004</td>
+                  <td>Markdelarosa@pcc.edu.ph</td>
+                  <td>Staff</td>
+                  <td>September 22, 2026</td>
+                  <td><span class="status-members active-members">Active</span></td>
+                  <td>
+                    <div class="actions-cell-members">
+                      <button class="menu-button-members" type="button" aria-label="Member actions"><i class="fa-solid fa-ellipsis"></i></button>
+                      <div class="menu-members" hidden>
+                        <button type="button" data-action="view">View Profile</button>
+                        <button type="button" data-action="edit">Edit Member</button>
+                        <button type="button" data-action="toggle">Suspend</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="person-members"><span class="avatar-members"><i class="fa-solid fa-user"></i></span><strong>Sofia Mendoza</strong></div></td>
+                  <td>PCC-3028-005</td>
+                  <td>Sofiamendoza@pcc.edu.ph</td>
+                  <td>Student</td>
+                  <td>September 21, 2026</td>
+                  <td><span class="status-members suspended-members">Suspended</span></td>
+                  <td>
+                    <div class="actions-cell-members">
+                      <button class="menu-button-members" type="button" aria-label="Member actions"><i class="fa-solid fa-ellipsis"></i></button>
+                      <div class="menu-members" hidden>
+                        <button type="button" data-action="view">View Profile</button>
+                        <button type="button" data-action="edit">Edit Member</button>
+                        <button type="button" data-action="toggle">Activate</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><div class="person-members"><span class="avatar-members"><i class="fa-solid fa-user"></i></span><strong>Carlo Garcia</strong></div></td>
+                  <td>PCC-3028-006</td>
+                  <td>Carlogarcia@pcc.edu.ph</td>
+                  <td>Faculty</td>
+                  <td>September 16, 2026</td>
+                  <td><span class="status-members active-members">Active</span></td>
+                  <td>
+                    <div class="actions-cell-members">
+                      <button class="menu-button-members" type="button" aria-label="Member actions"><i class="fa-solid fa-ellipsis"></i></button>
+                      <div class="menu-members" hidden>
+                        <button type="button" data-action="view">View Profile</button>
+                        <button type="button" data-action="edit">Edit Member</button>
+                        <button type="button" data-action="toggle">Suspend</button>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+          <p class="empty-members" hidden>No members match your search.</p>
+        </section>
+
+        <footer class="footer-members">
+          <span class="count-members">Showing 1 - 76 of 456 members</span>
+          <div class="pagination-members">
+            <button type="button" class="page-members prev-members" aria-label="Previous page"><i class="fa-solid fa-angle-left"></i></button>
+            <button type="button" class="page-members current-members">1</button>
+            <button type="button" class="page-members">2</button>
+            <button type="button" class="page-members">3</button>
+            <button type="button" class="page-members">4</button>
+            <button type="button" class="page-members">5</button>
+            <button type="button" class="page-members next-members" aria-label="Next page"><i class="fa-solid fa-angle-right"></i></button>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <script src="lms.js"></script>
+</body>
+</html>
